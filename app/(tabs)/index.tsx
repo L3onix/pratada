@@ -6,6 +6,7 @@ import {
   View
 } from 'react-native';
 import { Button, Text } from 'react-native-paper';
+import { AnimatedLogoButton } from '@/components/AnimatedLogoButton';
 
 const styles = StyleSheet.create({
   view: {
@@ -29,9 +30,10 @@ export default function HomeScreen() {
 
   return (
     <View style={styles.view}>
-      <TouchableOpacity style={styles.touchable}>
-        <Image style={styles.buttonLogo} source={logoImage} />
-      </TouchableOpacity>
+      <AnimatedLogoButton
+        source={logoImage}
+        style={styles.touchable}
+      />
     </View>
   );
 }
