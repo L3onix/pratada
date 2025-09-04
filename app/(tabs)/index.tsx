@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useRouter } from 'expo-router';
 import {
   Image,
   Dimensions,
@@ -27,10 +28,14 @@ const styles = StyleSheet.create({
 
 export default function HomeScreen() {
   const logoImage = require('../../assets/images/refeicao.png');
+  const router = useRouter();
 
   return (
     <View style={styles.view}>
-      <TouchableOpacity style={styles.touchable}>
+      <TouchableOpacity
+        style={styles.touchable}
+        onPress={() => router.navigate('/meal')}
+      >
         <Image style={styles.buttonLogo} source={logoImage} />
       </TouchableOpacity>
     </View>
