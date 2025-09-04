@@ -1,11 +1,13 @@
 import * as React from 'react';
 import {
   Image,
+  Dimensions,
   StyleSheet,
   TouchableOpacity,
   View
 } from 'react-native';
-import { Button, Text } from 'react-native-paper';
+
+const screenWidth = Dimensions.get('window').width;
 
 const styles = StyleSheet.create({
   view: {
@@ -14,13 +16,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   touchable: {
-    width: '80%',
-    height: '100%'
+    borderRadius: screenWidth * 0.4,
   },
   buttonLogo: {
-    width: '100%',
-    height: '100%',
-    resizeMode: 'contain'
+    resizeMode: 'contain',
+    width: screenWidth * 0.8,
+    height: screenWidth * 0.8,
   }
 });
 
